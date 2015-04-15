@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Is Next? - Iron Web</title>
+    <link rel="shortcut icon" href="{{ asset("bundles/whoisnextapp/images/ico/favicon.png") }}" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset("bundles/whoisnextapp/images/ico/apple-touch-icon-144-precomposed.png") }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset("bundles/whoisnextapp/images/ico/apple-touch-icon-114-precomposed.png") }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset("bundles/whoisnextapp/images/ico/apple-touch-icon-72-precomposed.png") }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset("bundles/whoisnextapp/images/ico/apple-touch-icon-57-precomposed.png") }}">
+
+    {% block stylesheets %}
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' id='fontawesome-css' href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css?ver=4.1.0' type='text/css' media='all' />
+        {% stylesheets
+            'bundles/whoisnextapp/css/animate.css'
+            'bundles/whoisnextapp/css/update.css'
+            'bundles/whoisnextapp/css/whoisandywhite.css'
+            'bundles/whoisnextapp/css/style.css'
+            'bundles/whoisnextapp/css/jetpack.css'
+            'bundles/whoisnextapp/css/corrections.css'
+            filter='cssrewrite'
+            filter='?minifycsscompressor'
+            output='css/style.css'
+        %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock stylesheets %}
+
+    {% block javascripts_head %}
+        {% javascripts
+            'bundles/whoisnextapp/js/jquery.js'
+            'bundles/whoisnextapp/js/jquery-migrate.min.js'
+            filter='?jsminplus'
+            output='js/head.js'
+        %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock javascripts_head %}
+
+</head>
+<body class="page page-id-8 page-template-default single-author"  data-spy="scroll" data-target=".anchor-nav-wrap" data-offset="225">
+<div class="navbar navbar-relative-top">
+    <div class="header">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('homepage') }}" title="Who Is Next?">Who Is Next?</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="section-1" class="section section-wysiwyg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <h1 style="text-align: center; margin: -32px 0 -9px;">WE LOVE PEOPLE,   WE LOVE TALENT</h1>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="section-2" class="section section-wysiwyg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <div style="margin: -43px 0;">
+                    <h1 style="text-align: center;"><strong>Join Our Talent Community</strong></h1>
+                    <p style="text-align: center;">We collaborate with people experiencing genuine passion for the internet world and entrepreneurship.</p>
+                    <p style="text-align: center;">Recently, our head office relocated to London, opening newly furnished offices with a modern work environment, in vibrant Soho (Central London).</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section section-number_feature" id="section-3">
+    <div class="container">
+        <div class="col-sm-3 number-container">
+            <p>Team of</p>
+            <p><span>+</span><span class="count-to-number" data-count="70">70</span></p>
+        </div>
+        <div class="col-sm-3 number-container">
+            <p>Lines of code</p>
+            <p><span>+</span><span class="count-to-number-fast" data-count="837452">837452</span></p>
+        </div>
+        <div class="col-sm-3 number-container">
+            <p>Coffees</p>
+            <p><span>+</span><span class="count-to-number" data-count="837452">837452</span></p>
+        </div>
+        <div class="col-sm-3 number-container">
+            <p>Football table scores </p>
+            <p><span>+</span><span class="count-to-number" data-count="13892">13892</span></p>
+        </div>
+    </div>
+</div>
+<div data-title="#our-team" class="section section-section_anchor" id="section-4">
+    <img src="{{ asset("bundles/whoisnextapp/images/team.png") }}">
+</div>
+<div class="section section-team" id="section-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h2 style="text-align: center;">THE TEAM</h2>
+                <p style="text-align: center;">Our credo : from subscription to success !</p>
+                <p style="text-align: center;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="team-row">
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/abdoul.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Abdoul <br/><span>Lead Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/guillaume.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Guillaume <br/><span>Senior Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/khaldoun.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Khaldoun <br/><span>Senior Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/alain.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Alain <br/><span>Platform Engineer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/salvatore.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Salvatore <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="team-row">
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/jonathanp.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Jonathan <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/loic.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Loïc <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                        <div class="cross off"></div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/sebastien.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Sébastien <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/steve.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Steve <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/helene.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Hélène <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="team-row">
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/adrien.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Adrien <br/><span>Developer </span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/jonathan.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Jonathan <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/nikos.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Nikos <br/><span>WordPress Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/james.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">James <br/><span>Design Director</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/sara.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Sara <br/><span>Designer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="team-row">
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/mickael.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Mikaël <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/denis.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Denis <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/thomas.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Thomas <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/christophe.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Christophe <br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/jean-francois.jpg") }})">
+                            <div class="team-member-text cross">
+                                <div class="info">Jean<br />François<br/><span>Developer</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="team-row">
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/lorian.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Lorian <br/><span>DevOps</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team-member-wrap">
+                        <div class="team-member" style="background-image:url({{ asset("bundles/whoisnextapp/images/people/alba.jpg") }})">
+                            <div class="team-member-text">
+                                <div class="info">Alba <br/><span>Designer</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div data-title="#our-office" class="section section-section_anchor" id="section-8">
+    <img src="{{ asset("bundles/whoisnextapp/images/our-office.png") }}">
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYDl_G5aVjATJynzvlSWcQnpnvSJ6D7gw"></script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: { lat: 51.5151518, lng: -0.1367688},
+            zoom: 15,
+            styles: [{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#e7eaec"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#e7eaeb"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"visibility":"off"},{"color":"#c9d5ca"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ddc6a2"},{"saturation":"-50"},{"lightness":"7"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#b59e74"},{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#d7dbdc"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#d7dbdc"}]},{"featureType":"transit.station","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#abb9c1"}]}]
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+                mapOptions);
+
+        var myMarker = new google.maps.Marker({
+            // Coordonnées du cinéma
+            position: { lat: 51.5141519, lng: -0.1367688},
+            map: map,
+            title: "Iron web",
+            icon:"http://maps.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png"
+        });
+
+        var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading"><img style="width:200px" src="{{ asset("bundles/whoisnextapp/images/logo.png") }}" alt=""></h1>'+
+                '<div id="bodyContent">'+
+                '<p>52-53 Apocalypse Street <br>' +
+                'Zombie House 6-7 Floors<br>'+
+                'W1F 7NH</p>'+
+                '</div>'+
+                '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        infowindow.open(map,myMarker);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div class="container" style="margin-top:23px;margin-bottom:23px;">
+    <div class="col-md-12 col-xs-12">
+        <div id="map-canvas"></div>
+   </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="logo">
+                    <img src="{{ asset("bundles/whoisnextapp/images/logo-min.png") }}">
+                </p>
+                <p class="address">
+                    IronWeb Ltd,
+                    52 53 Apocalypse Street,
+                    Zombie House ( 6-7 Floors ),
+                    W1F7NH LONDON
+                </p>
+            </div>
+        </div><!-- /container -->
+    </div>
+</footer>
+
+
+{% block javascripts_footer %}
+    <script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201516'></script>
+    <script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2015Apraa'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var WPGroHo = {"my_hash":""};
+        /* ]]> */
+    </script>
+    {% javascripts
+        'bundles/whoisnextapp/js/retina.js'
+        'bundles/whoisnextapp/js/wpgroho.js'
+        'bundles/whoisnextapp/js/comment-reply.min.js'
+        'bundles/whoisnextapp/js/bootstrap.min.js'
+        'bundles/whoisnextapp/js/plugins.js'
+        'bundles/whoisnextapp/js/whoisandywhite.js'
+        'bundles/whoisnextapp/js/midnight.jquery.min.js'
+        'bundles/whoisnextapp/js/skrollr.min.js'
+        'bundles/whoisnextapp/js/update.js'
+        filter='?jsminplus'
+        output='js/footer.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock javascripts_footer %}
+</body>
+</html>

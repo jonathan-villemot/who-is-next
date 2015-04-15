@@ -1,0 +1,24 @@
+
+.team-member-wrap {
+    position: relative;
+}
+
+.team-member-text.cross {
+    opacity: 1 !important;
+    background: url("../images/cross.png") !important;
+    transition: background 1s !important;
+}
+
+.team-member-text.cross:hover {
+    background: rgba(52,119,181,0.8) !important;
+    transition: background 1s !important;
+}
+
+.team-member-text.cross .info {
+    opacity: 0;
+}
+
+.team-member-text.cross:hover .info {
+    opacity: 1;
+    transition: opacity 1s;
+}

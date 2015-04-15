@@ -1,0 +1,79 @@
+img#wpstats {
+    display: none;
+}
+
+.recentcomments a {
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#section-1	{
+    background-color: #FFFFFF;
+    color: #3477b5;
+}
+#section-1 h1, #section-1 .h1,
+#section-1 h2, #section-1 .h2,
+#section-1 h3, #section-1 .h3,
+#section-1 h4, #section-1 .h4,
+#section-1 h5, #section-1 .h5,
+#section-1 h6, #section-1 .h6,
+#section-1 a
+{
+    color: #ff8500;
+}
+
+#section-2	{
+    background-color: #3477b5;
+    color: #ffffff;
+}
+#section-2 h1, #section-2 .h1,
+#section-2 h2, #section-2 .h2,
+#section-2 h3, #section-2 .h3,
+#section-2 h4, #section-2 .h4,
+#section-2 h5, #section-2 .h5,
+#section-2 h6, #section-2 .h6,
+#section-2 a
+{
+    color: #ffffff;
+}
+
+#section-5	{
+    background-color: #ff8500;
+    color: #FFFFFF;
+}
+#section-5 h1, #section-5 .h1,
+#section-5 h2, #section-5 .h2,
+#section-5 h3, #section-5 .h3,
+#section-5 h4, #section-5 .h4,
+#section-5 h5, #section-5 .h5,
+#section-5 h6, #section-5 .h6,
+#section-5 a
+{
+    color: #FFFFFF;
+}
+
+#section-7	{
+    background-color: #28394a;
+}
+#section-7 h1, #section-7 .h1,
+#section-7 h2, #section-7 .h2,
+#section-7 h3, #section-7 .h3,
+#section-7 h4, #section-7 .h4,
+#section-7 h5, #section-7 .h5,
+#section-7 h6, #section-7 .h6,
+#section-7 a
+{
+    color: #FFFFFF;
+}
+
+footer .logo,
+footer .address {
+    display: inline-block;
+}
+
+footer .address {
+    float: right;
+    font-size: 1em;
+    margin: 0.7em 0 0;
+}
