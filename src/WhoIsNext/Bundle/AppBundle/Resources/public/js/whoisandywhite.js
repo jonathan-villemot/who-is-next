@@ -17,7 +17,7 @@
 			slideshow: true,
 			touch: true,
 			prevText: '<span></span>',
-			nextText: '<span></span>',
+			nextText: '<span></span>'
 		});
 
 		/*
@@ -180,16 +180,23 @@
 			$('.count-to-number').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView && !$(this).hasClass('count-complete')) {
 					$(this).html('0');
-					count($(this));
+					count($(this), 50);
 				}
 			});
 			// count to target on number section
 			$('.count-to-number-fast').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
 				if (isInView && !$(this).hasClass('count-complete')) {
 					$(this).html('0');
-					countFast($(this));
+					count($(this), 1);
 				}
 			});
+            // count to target on number section and return
+            $('.count-to-number-and-return-slow').bind('inview', function(event, isInView, visiblePartX, visiblePartY) {
+                if (isInView && !$(this).hasClass('count-complete')) {
+                    $(this).html($(this).data("base"));
+                    countAndReturn($(this), 1000);
+                }
+            });
 
 
 
@@ -284,36 +291,99 @@
 	/*
 	** Function to count up to a number
 	*/
-	function count($this){
-        var current = parseInt($this.html(), 10);
-        $this.html(++current);
-        if(current < $this.data('count')){
-            setTimeout(function(){count($this)}, 50);
+	function count($this, speed) {
+
+        if ($this.hasClass("count-complete")) {
+            return ;
         }
-        else
-        {
-        	$this.html( $this.data('count'));
-        	$this.addClass('count-complete');
+
+        var stopCountStringSelector = $this.data("stop-count");
+        if (typeof(stopCountStringSelector) !== "undefined") {
+            var $stopCount = $(stopCountStringSelector);
+            if ($stopCount.length > 0 && $stopCount.hasClass("count-complete")) {
+                $this.addClass("count-complete");
+            }
         }
+
+        // Gets the different necessary values
+        var current    = parseInt($this.html(), 10);
+        var countValue = parseInt($this.data("count"), 10);
+
+        if (current > countValue) {
+            throw "count -> Logic Exception: current must be strictly inferior than countValue.";
+        }
+
+        // If current is inferior than countValue, we increase the current number
+        if (current <= countValue) {
+            // Adding the count-complete class when the countValue is reached
+            if (current === countValue) {
+                $this.addClass("count-complete");
+            } else {
+                $this.html(current + 1);
+            }
+        }
+
+        // Scheduling the next iteration (each speed ms)
+        setTimeout(function() {
+            count($this, speed);
+        }, speed);
     }
 
- 	function countFast($this){
+    /*
+     ** Function to count up to a number and return to zero
+     */
+    function countAndReturn($this, speed) {
+
+        if ($this.hasClass("count-complete")) {
+            return ;
+        }
+
+        // Gets direction or initialize it
+        var direction = $this.data("direction");
+        if (typeof(direction) === "undefined") {
+            direction = "+";
+        }
+
+        // Gets the different necessary values
         var current = parseInt($this.html(), 10);
-        $this.html(++current);
-        if(current < $this.data('count')){
-            setTimeout(function(){countFast($this)}, 1);
+        var count   = parseInt($this.data("count"), 10);
+        var base    = parseInt($this.data("base"), 10);
+
+        if (current > count) {
+            throw "countAndReturn -> Logic Exception: current must be strictly inferior than count.";
         }
-        else
-        {
-        	$this.html( $this.data('count'));
-        	$this.addClass('count-complete');
+        if (base >= count) {
+            throw "countAndReturn -> Logic Exception: base must be inferior than count.";
         }
-    }  
 
+        // If it's the + direction, we increase the current number
+        if ("+" === direction && current <= count) {
+            // Changing the direction when the count is reached
+            if (current === count) {
+                direction = "-"
+            } else {
+                $this.html(current + 1);
+            }
+        }
 
+        // If it's the - direction, we decrease the current number
+        if ("-" === direction && current >= base) {
+            // Adding the count-complete class when the base is reached
+            if (current === base) {
+                $this.addClass("count-complete");
+            } else {
+                $this.html(current - 1);
+            }
+        }
 
+        // Sets the current direction
+        $this.data("direction", direction);
 
-
+        // Scheduling the next iteration (each speed ms)
+        setTimeout(function() {
+            countAndReturn($this, speed);
+        }, speed);
+    }
 
     /*
 	** Function to set css blocks to a matching height in a row
