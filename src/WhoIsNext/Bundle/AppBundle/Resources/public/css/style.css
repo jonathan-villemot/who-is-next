@@ -1,4 +1,8 @@
 
+.community .underline {
+    font-weight: bold;
+}
+
 .team-member-wrap {
     position: relative;
 }
